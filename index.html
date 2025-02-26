@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Logan</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="mainCard">
+        <div class="mainCard-inner">
+            <div class="homePage">
+                <h1 class="title">Hi, I'm Christian</h1>
+                <p class="info">I am a front-end developer with the goal of improving end-user experience through thoughtful and efficient development. 
+                    My work thus far has included personal portfolios, blogs and ecommerce sites. Check it out below! </p>
+                <div class="icon-container">
+                    <a class="iconLink"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/github.png"></a>
+                    <a class="iconLink"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/linkedIn.png"></a>
+                    <a class="iconLink"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/email.png"></a>
+                </div>
+        
+                <button class="contact">Get In Touch</button>
+            </div>
+            <div class="spacer">
+        
+            </div>
+            <div class="skillsPage page">
+                <hr>
+                <h2>Skills</h2>
+                <div class="skills">
+                    <p class="skillIcon"><img class="skillIconImg" src="imgs/skillIcons/javaScript.png">JavaScript</p>
+                    <p class="skillIcon"><img class="skillIconImg" src="imgs/skillIcons/html.png">HTML</p>
+                    <p class="skillIcon"><img class="skillIconImg" src="imgs/skillIcons/css.png">CSS</p>
+                    <p class="skillIcon"><img class="skillIconImg" src="imgs/skillIcons/typeScript.png">TypeScript</p>
+                    <p class="skillIcon"><img class="skillIconImg" src="imgs/skillIcons/react.png">React</p>
+                </div>
+            </div>
+
+            <div class="projectPage page">
+                <hr>
+                <h2>Projects</h2>
+                <div>
+                    <input class="dropdownInput" id="drop01" type="radio" name="dropdownMenu"/>
+                    <label class="dropdownOpener" for="drop01">PEV Rentals Ecommerce</label>
+                    <label class="dropdownCloser" for="dropclose">PEV Rentals Ecommerce</label>
+                    <div class="dropdownContent">
+                        <p>PEV Rentals Ecommerce Info</p>
+                    </div>
+                </div>
+                <div>
+                    <input class="dropdownInput" id="drop02" type="radio" name="dropdownMenu"/>
+                    <label class="dropdownOpener" for="drop02">Le Patisserie</label>
+                    <label class="dropdownCloser" for="dropclose">Le Patisserie</label>
+                    <div class="dropdownContent">
+                        <p>Le Patisserie Info</p>
+                    </div>
+                    <input class="dropdownInput" type="radio" name="dropdownMenu" id="dropclose" />
+                </div>
+                <div>
+                    <input class="dropdownInput" id="drop03" type="radio" name="dropdownMenu"/>
+                    <label class="dropdownOpener" for="drop03">Software Engineer</label>
+                    <label class="dropdownCloser" for="dropclose">Software Engineer</label>
+                    <div class="dropdownContent">
+                        <p>Software Engineer Info</p>
+                    </div>
+                    <input class="dropdownInput" type="radio" name="dropdownMenu" id="dropclose" />
+                </div>
+                <div>
+                    <input class="dropdownInput" id="drop04" type="radio" name="dropdownMenu"/>
+                    <label class="dropdownOpener" for="drop04">Terminal Portfolio</label>
+                    <label class="dropdownCloser" for="dropclose">Terminal Portfolio</label>
+                    <div class="dropdownContent">
+                        <p>Terminal Portfolio Info</p>
+                    </div>
+                    <input class="dropdownInput" type="radio" name="dropdownMenu" id="dropclose" />
+                </div>
+            </div>
+
+            <div class="contactPage page">
+                <hr>
+                <h2>Contact Me</h2>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cbdce4e7-d17b-4cad-b609-8fa9ba5ecf3d">
+                
+                    <fieldset class="contact-form-details">
+                        <input class="contact-form-details-name" type="text" placeholder="Name" name="name" class="nameEmail" required autocomplete="name">
+                        <input class="contact-form-details-email" type="email" placeholder="Email" name="email" class="nameEmail" required autocomplete="email">
+                    </fieldset>
+                    
+                    <textarea class="contact-form-message" placeholder="Message" name="message" required autocomplete="off"></textarea>
+
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <button type="submit" class="contact-submit-button --button" id="js-contact-form-submitButton">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

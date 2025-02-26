@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default values */
+body {
+    background: hsl(0, 0%, 5%);
+    font-family: roboto;
+    color: #fff;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.page {
+    width: 80vw;
+    position: relative;
+    z-index: 1;
+    background-color: var(--backgroundColour);
+    padding-left: var(--lMargin);
+    padding-bottom: var(--lMargin);
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: var(--lMargin);
+}
+
+
+/* Variables */
+:root {
+    --border-radius: 25px;
+
+    --backgroundColour: hsl(0, 0%, 6%);
+    --xsMargin: 0.5rem;
+    --sMargin: 0.75rem;
+    --mMargin: 1rem;
+    --lMargin: 2.5rem;
+    --xlMargin: 3.75rem;
+    --xxlMargin: 6.25rem;
+}
+/* Border Animation */
+.mainCard {
+    max-width: 90vw;
+    width: 100%;
+    margin: 10vh auto;
+    border-radius: var(--border-radius);
+    position: relative;
+    padding: 2px;
+}
+
+.mainCard .mainCard-inner {
+    max-width: 90vw;
+    height: 80vh;
+    padding: var(--xlMargin);
+    background: var(--backgroundColour);
+    border-radius: var(--border-radius);
+}
+
+.mainCard-inner {
+    overflow-y: scroll;
+}
+.mainCard::before,
+.mainCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    #920c11,
+    #ffca3a,
+    #7cc900,
+    #0e5a8a,
+    #4f2d80,
+    #ff6600
+  );
+  background-size: 500%;
+  z-index: -1;
+  animation: glow 20s linear infinite;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.mainCard::after {
+    filter: blur(10px);
+    transform: translate3d(0, 0, 0); /* For Safari */
+}
+
+@keyframes glow {
+0% {
+    background-position: 0 0;
+}
+
+50% {
+    background-position: 100% 0;
+}
+
+100% {
+    background-position: 0 0;
+}
+}
+
+
+/* Main Page Styling */
+.homePage {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.title {
+    font-size: var(--xlMargin);
+    margin-block: var(--lMargin);
+}
+
+.info {
+    margin-block: var(--lMargin);
+    max-width: 60ch;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconLink {
+    display: inline-block;
+    background-color: white;
+    padding: var(--xsMargin);
+    margin-right: var(--mMargin);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.contact:is(:hover, :focus), .iconLink:is(:hover, :focus) {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.homeIcon {
+    height: 35px;
+    width: 35px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    margin: var(--lMargin);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: calc(var(--mMargin)*1.25);
+    font-weight: 600;
+    transition: all 0.5s;
+    padding: var(--sMargin);
+}
+
+.spacer {
+    height: 80vh;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-direction: row;
+}
+.skillIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--sMargin);
+    background-color: #0e5a8a;
+    margin-right: var(--xlMargin);
+    margin-top: var(--lMargin);
+    border-radius: calc(var(--border-radius)/2);
+    width: 150px;
+}
+
+.skillIconImg {
+    margin: var(--sMargin); 
+    height: 50px;
+    width: 50px;
+}
+
+/* Project Section*/
+.dropdownContent, 
+.dropdownInput, 
+.dropdownCloser, 
+.dropdownInput:checked~.dropdownOpener {
+    display: none;
+}
+
+.dropdownInput:checked~.dropdownContent, 
+.dropdownInput:checked~.dropdownCloser {
+    display: block;
+}
+
+.dropdownLabel {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+
+/* Contact Section*/
+.contact {
+    height: fit-content;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form-myDetails {
+    display: flex;
+}
+
+.contact-form-details {
+    border: none;
+    margin: var(--default-margin);
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-form-details-name {
+    margin: var(--mMargin);
+    width: calc(15vw - var(--mMargin));
+    margin-left: 0;
+}
+
+.contact-form-details-email {
+    margin-block: var(--mMargin);
+    width: calc(25vw - var(--mMargin));
+}
+
+.contact-form-message {
+    margin-inline: var(--mMargin);
+    width: calc(40vw - var(--mMargin));
+    height: 20vw;
+    margin-left: 0;
+}
+
+.contact-form-details > *, .contact-form-message {
+    border:  1px solid black;
+    background-color: rgb(78, 78, 78);
+    padding: 1rem;
+    color: white;
+}
+
+.contact-submit-button {
+    margin-top: var(--mMargin);
+    margin-left: 0;
+    width: calc(40vw - var(--mMargin));
+}
