@@ -18,7 +18,7 @@ body {
 }
 
 .page {
-    width: 80vw;
+    width: var(--sectionWidth);
     position: relative;
     z-index: 1;
     background-color: var(--backgroundColour);
@@ -59,11 +59,13 @@ h2 {
     --lMargin: 2.5rem;
     --xlMargin: 3.75rem;
     --xxlMargin: 6.25rem;
+
+    --sectionWidth: 80vw;
 }
 
 /* Border Animation */
 .mainCard {
-    max-width: 90vw;
+    max-width: calc(var(--sectionWidth) + 10vw);
     width: 100%;
     margin: 10vh auto;
     border-radius: var(--border-radius);
@@ -72,7 +74,7 @@ h2 {
 }
 
 .mainCard .mainCard-inner {
-    max-width: 90vw;
+    max-width: calc(var(--sectionWidth) + 10vw);
     height: 80vh;
     padding: var(--xlMargin);
     background: var(--backgroundColour);
@@ -126,6 +128,7 @@ h2 {
 /* Scrollbar Styling */
 .mainCard-inner {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -210,6 +213,7 @@ h2 {
 .skills {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .skillIcon {
     display: flex;
@@ -220,7 +224,7 @@ h2 {
     margin-right: var(--xlMargin);
     margin-top: var(--lMargin);
     border-radius: calc(var(--border-radius)/2);
-    width: 150px;
+    min-width: 150px;
 }
 
 .skillIconImg {
@@ -284,8 +288,6 @@ h2 {
 }
 
 
-
-
 /* Contact Section*/
 .contact {
     height: fit-content;
@@ -310,19 +312,19 @@ h2 {
 
 .contact-form-details-name {
     margin: var(--mMargin);
-    width: calc(15vw - var(--mMargin));
+    width: calc(var(--sectionWidth)/6 - var(--mMargin));
     margin-left: 0;
 }
 
 .contact-form-details-email {
     margin-block: var(--mMargin);
-    width: calc(25vw - var(--mMargin));
+    width: calc(var(--sectionWidth)/3 - var(--mMargin));
 }
 
 .contact-form-message {
     margin-inline: var(--mMargin);
-    width: calc(40vw - var(--mMargin));
-    height: 20vw;
+    width: calc(var(--sectionWidth)/2 - var(--mMargin));
+    height: calc(var(--sectionWidth)/4);
     margin-left: 0;
 }
 
