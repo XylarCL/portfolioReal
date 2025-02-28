@@ -14,12 +14,12 @@
                 <p class="info">I am a front-end developer with the goal of improving end-user experience through thoughtful and efficient development. 
                     My work thus far has included personal portfolios, blogs and ecommerce sites. Check it out below! </p>
                 <div class="icon-container">
-                    <a class="iconLink"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/github.png"></a>
-                    <a class="iconLink"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/linkedIn.png"></a>
-                    <a class="iconLink"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/email.png"></a>
+                    <a class="iconLink" href="https://github.com/XylarCL"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/github.png"></a>
+                    <a class="iconLink" href="https://www.linkedin.com/in/christian-logan-9bb026339/"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/linkedIn.png"></a>
+                    <a class="iconLink" href="mailto:christianlogannewW@gmail.com"><img class="homeIcon" width="50px" height="50px" src="imgs/homePageIcons/email.png"></a>
                 </div>
         
-                <button class="contact">Get In Touch</button>
+                <button class="contact"><a href="#contact">Get in Touch</a></button>
             </div>
             <div class="spacer">
         
@@ -40,28 +40,25 @@
                 <hr>
                 <h2>Projects</h2>
                 <div>
-                    <input class="dropdownInput" id="drop01" type="radio" name="dropdownMenu"/>
-                    <label class="dropdownOpener" for="drop01">PEV Rentals Ecommerce</label>
-                    <label class="dropdownCloser" for="dropclose">PEV Rentals Ecommerce</label>
-                    <div class="dropdownContent">
-                        <p>PEV Rentals Ecommerce Info</p>
-                    </div>
-                </div>
-                <div>
                     <input class="dropdownInput" id="drop02" type="radio" name="dropdownMenu"/>
                     <label class="dropdownOpener" for="drop02">Le Patisserie</label>
                     <label class="dropdownCloser" for="dropclose">Le Patisserie</label>
                     <div class="dropdownContent">
-                        <p>Le Patisserie Info</p>
+                        <a class="websiteLink" href="https://lepatisserie.netlify.app/">Link</a>
+                        <p class="websiteInfo">Le Patisserie was created as a mock website for a French Bakery set in the heart of London.
+                            It includes a functioning shop, cart, about and contact page.
+                        </p>
                     </div>
                     <input class="dropdownInput" type="radio" name="dropdownMenu" id="dropclose" />
                 </div>
                 <div>
                     <input class="dropdownInput" id="drop03" type="radio" name="dropdownMenu"/>
-                    <label class="dropdownOpener" for="drop03">Software Engineer</label>
-                    <label class="dropdownCloser" for="dropclose">Software Engineer</label>
+                    <label class="dropdownOpener" for="drop03">Software Engineer Blog</label>
+                    <label class="dropdownCloser" for="dropclose">Software Engineer Blog</label>
                     <div class="dropdownContent">
-                        <p>Software Engineer Info</p>
+                        <a class="websiteLink" href="https://brunodebattista.netlify.app/">Link</a>
+                        <p class="websiteInfo">This blog was crafted 
+                        </p>www
                     </div>
                     <input class="dropdownInput" type="radio" name="dropdownMenu" id="dropclose" />
                 </div>
@@ -70,13 +67,15 @@
                     <label class="dropdownOpener" for="drop04">Terminal Portfolio</label>
                     <label class="dropdownCloser" for="dropclose">Terminal Portfolio</label>
                     <div class="dropdownContent">
-                        <p>Terminal Portfolio Info</p>
+                        <a class="websiteLink" href="cmd-portfolio">Link</a>
+                        <p class="websiteInfo">This website was created to instill the nostalgic feeling of a classic windows terminal.
+                        </p>
                     </div>
                     <input class="dropdownInput" type="radio" name="dropdownMenu" id="dropclose" />
                 </div>
             </div>
 
-            <div class="contactPage page">
+            <div class="contactPage page" id="contact">
                 <hr>
                 <h2>Contact Me</h2>
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
