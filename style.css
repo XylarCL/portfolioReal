@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CSS Reset */
+/*#region*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+/*#endregion*/
 
 /* Default values */
+/*#region*/
 body {
     background: hsl(0, 0%, 5%);
     font-family: roboto;
@@ -22,7 +25,6 @@ body {
     position: relative;
     z-index: 1;
     background-color: var(--backgroundColour);
-    padding-left: var(--lMargin);
     padding-bottom: var(--lMargin);
 }
 
@@ -46,9 +48,10 @@ button {
 h2 {
     padding-bottom: var(--mMargin);
 }
-
+/*#endregion*/
 
 /* Variables */
+/*#region*/
 :root {
     --border-radius: 25px;
 
@@ -62,8 +65,10 @@ h2 {
 
     --sectionWidth: 80vw;
 }
+/*#endregion*/
 
 /* Border Animation */
+/*#region*/
 .mainCard {
     max-width: calc(var(--sectionWidth) + 10vw);
     width: 100%;
@@ -80,7 +85,6 @@ h2 {
     background: var(--backgroundColour);
     border-radius: var(--border-radius);
 }
-
 
 .mainCard::before,
 .mainCard::after {
@@ -124,8 +128,10 @@ h2 {
     background-position: 0 0;
 }
 }
+/*#endregion*/
 
 /* Scrollbar Styling */
+/*#region*/
 .mainCard-inner {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -153,13 +159,16 @@ h2 {
     background: transparent;
     margin-top: 20px;
 }
+/*#endregion*/
 
 /* Main Page Styling */
+/*#region*/
 .homePage {
     position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    width: var(--sectionWidth);
+    padding-left: 1px;
 }
 
 .title {
@@ -191,6 +200,10 @@ h2 {
     transition: all 0.5s;
 }
 
+.contact {
+    margin-left: 0;
+}
+
 .contact > *{
     text-decoration: none;
     color: black;
@@ -207,9 +220,12 @@ h2 {
 
 .spacer {
     height: 80vh;
+    background-color: transparent;
 }
+/*#endregion*/
 
 /* Skills Section */
+/*#region*/
 .skills {
     display: flex;
     flex-direction: row;
@@ -232,8 +248,10 @@ h2 {
     height: 50px;
     width: 50px;
 }
+/*#endregion*/
 
 /* Project Section*/
+/*#region*/
 .dropdownInput, 
 .dropdownCloser, 
 .dropdownInput:checked~.dropdownOpener {
@@ -246,15 +264,15 @@ h2 {
 }
 
 .dropdownContent {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     transition: all 0.5s;
     margin-bottom: 0;
 }
 
 .dropdownInput:checked~.dropdownContent {
-    height: 100px;
-    transition: all 0.5s;
+    max-height: 300px;
+    transition: all 1s;
     margin-bottom: calc(var(--mMargin)*1.w5);
 }
 
@@ -286,13 +304,14 @@ h2 {
 .websiteLink {
     font-size: 1.2rem;
 }
-
+/*#endregion*/
 
 /* Contact Section*/
-.contact {
-    height: fit-content;
-}
+/*#region*/
 
+.contactPage {
+    padding-bottom: 0;
+}
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -340,3 +359,56 @@ h2 {
     margin-left: 0;
     width: calc(40vw - var(--mMargin));
 }
+/*#endregion*/
+
+/* Responsive Design*/
+/*#region*/
+@media only screen and (max-width: 480px) {
+    .title, .info, .contact{
+        margin-top: var(--mMargin);
+        margin-bottom: var(--xsMargin);
+    }
+
+    h2 {
+        text-align: center;
+    }
+    .mainCard .mainCard-inner {
+        padding: var(--sMargin);
+    }
+
+    .page {
+        width: 100%;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+    .skillIcon {
+        margin: var(--mMargin);
+    }
+
+    .contact-submit-button {
+        margin-inline: auto;
+        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
+    }
+    
+    .contact-form-details-email, .contact-form-details-name {
+        margin-block: var(--mMargin);
+        width: calc(var(--sectionWidth) / 2.4 - var(--mMargin));
+    }
+
+    .contact-form-details {
+        margin: auto;
+    }
+
+    .contact-form-details-name {
+        margin-left: 0;
+    }
+    
+    .contact-form-message {
+        margin-inline: auto;
+        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
+        height: calc(var(--sectionWidth) / 2);
+    }
+}
+/*#endregion*/
