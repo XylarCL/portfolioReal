@@ -59,6 +59,7 @@ h2 {
     --border-radius: 25px;
 
     --backgroundColour: hsl(0, 0%, 6%);
+    --xxsMargin: 0.25rem;
     --xsMargin: 0.5rem;
     --sMargin: 0.75rem;
     --mMargin: 1rem;
@@ -374,6 +375,31 @@ h2 {
 /* Responsive Design*/
 /*#region*/
 
+/* 768px */
+@media only screen {
+    .contact-form-details {
+        flex-direction: column;
+    }
+
+    .contact-submit-button {
+        margin-inline: 0;
+        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
+    }
+
+    .contact-form-details {
+        margin: 0;
+    }
+
+    .contact-form-message, .contact-form-details-email, .contact-form-details-name {
+        margin-block: var(--xsMargin);
+        margin-inline: 0;
+        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
+    }
+    
+    .contact-form-message {
+        height: calc(var(--sectionWidth) / 2);
+    }
+}
 
 /* 480px */
 @media only screen and (max-width: 480px) and (max-height: 950px) {
@@ -416,27 +442,9 @@ h2 {
         margin: var(--mMargin);
     }
 
-    .contact-form-details {
-        flex-direction: column;
-    }
-
-    .contact-submit-button {
-        margin-inline: auto;
-        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
-    }
-
-    .contact-form-details {
-        margin: auto;
-    }
-
-    .contact-form-message, .contact-form-details-email, .contact-form-details-name {
+    .contact-form-message, .contact-form-details-email, .contact-form-details-name, .contact-submit-button, .contact-form-details {
         margin-block: var(--xsMargin);
         margin-inline: auto;
-        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
-    }
-    
-    .contact-form-message {
-        height: calc(var(--sectionWidth) / 2);
     }
 }
 /*#endregion*/
