@@ -66,7 +66,7 @@ h2 {
     --xlMargin: 3.75rem;
     --xxlMargin: 6.25rem;
 
-    --sectionWidth: 80vw;
+    --sectionWidth: min(80vw, 1000px);
 }
 /*#endregion*/
 
@@ -87,6 +87,11 @@ h2 {
     padding: var(--xlMargin) var(--xlMargin) 0 var(--xlMargin);
     background: var(--backgroundColour);
     border-radius: var(--border-radius);
+}
+
+.mainCard-inner {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .mainCard::before,
@@ -135,11 +140,6 @@ h2 {
 
 /* Scrollbar Styling */
 /*#region*/
-.mainCard-inner {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -367,7 +367,7 @@ h2 {
 .contact-submit-button {
     margin-top: var(--mMargin);
     margin-left: 0;
-    width: calc(40vw - var(--mMargin));
+    width: calc(var(--sectionWidth)/2 - var(--mMargin));
 }
 /*#endregion*/
 
