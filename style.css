@@ -74,7 +74,7 @@ h2 {
 /*#region*/
 .mainCard {
     max-width: calc(var(--sectionWidth) + 10vw);
-    width: 100%;
+    width: min(100%, 1100px);
     margin: 10vh auto;
     border-radius: var(--border-radius);
     position: relative;
