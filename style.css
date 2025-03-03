@@ -18,6 +18,9 @@ body {
     color: #fff;
     font-size: 1.5rem;
     overflow: hidden;
+    display: flex;
+    height: 100vh;
+    align-items: center;
 }
 
 .page {
@@ -29,7 +32,7 @@ body {
 }
 
 hr {
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgb(161, 161, 161);
     margin-bottom: var(--lMargin);
 }
 
@@ -80,8 +83,8 @@ h2 {
 
 .mainCard .mainCard-inner {
     max-width: calc(var(--sectionWidth) + 10vw);
-    height: 80vh;
-    padding: var(--xlMargin);
+    height: min(80vh, 600px);
+    padding: var(--xlMargin) var(--xlMargin) 0 var(--xlMargin);
     background: var(--backgroundColour);
     border-radius: var(--border-radius);
 }
@@ -220,7 +223,12 @@ h2 {
 
 .spacer {
     height: 80vh;
+    pointer-events: none;
     background-color: transparent;
+}
+
+.enable-scroll {
+    pointer-events: auto;
 }
 /*#endregion*/
 
@@ -363,17 +371,35 @@ h2 {
 
 /* Responsive Design*/
 /*#region*/
-@media only screen and (max-width: 480px) {
+
+
+/* 480px */
+@media only screen and (max-width: 480px) and (max-height: 950px) {
     .title, .info, .contact{
-        margin-top: var(--mMargin);
-        margin-bottom: var(--xsMargin);
+        margin-top: calc(var(--mMargin) *1.2);
+        margin-bottom: var(--mMargin);
     }
 
+    .info {
+        font-size: calc(var(--mMargin) * 1.4);
+    }
+}
+@media only screen and (max-width: 480px) and (max-height: 810px) {
+    .title, .info, .contact{
+        margin-top: var(--mMargin);
+        margin-bottom: var(--mMargin);
+    }
+
+    .info {
+        font-size: calc(var(--mMargin) * 1.2);
+    }
+}
+@media only screen and (max-width: 480px) {
     h2 {
         text-align: center;
     }
     .mainCard .mainCard-inner {
-        padding: var(--sMargin);
+        padding: var(--sMargin) var(--sMargin) 0 var(--sMargin);
     }
 
     .page {
@@ -383,31 +409,31 @@ h2 {
     .skills {
         justify-content: center;
     }
+
     .skillIcon {
         margin: var(--mMargin);
+    }
+
+    .contact-form-details {
+        flex-direction: column;
     }
 
     .contact-submit-button {
         margin-inline: auto;
         width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
     }
-    
-    .contact-form-details-email, .contact-form-details-name {
-        margin-block: var(--mMargin);
-        width: calc(var(--sectionWidth) / 2.4 - var(--mMargin));
-    }
 
     .contact-form-details {
         margin: auto;
     }
 
-    .contact-form-details-name {
-        margin-left: 0;
+    .contact-form-message, .contact-form-details-email, .contact-form-details-name {
+        margin-block: var(--xsMargin);
+        margin-inline: auto;
+        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
     }
     
     .contact-form-message {
-        margin-inline: auto;
-        width: calc(var(--sectionWidth) / 1.2 - var(--mMargin));
         height: calc(var(--sectionWidth) / 2);
     }
 }
