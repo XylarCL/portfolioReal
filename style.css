@@ -224,12 +224,6 @@ h2 {
     width: 35px;
 }
 
-.spacer {
-    height: 80vh;
-    pointer-events: none;
-    background-color: transparent;
-}
-
 .enable-scroll {
     pointer-events: auto;
 }
@@ -261,7 +255,7 @@ h2 {
 }
 /*#endregion*/
 
-/* Project Section*/
+/* Project Section */
 /*#region*/
 .dropdownInput, 
 .dropdownCloser, 
@@ -317,7 +311,7 @@ h2 {
 }
 /*#endregion*/
 
-/* Contact Section*/
+/* Contact Section */
 /*#region*/
 
 .contactPage {
