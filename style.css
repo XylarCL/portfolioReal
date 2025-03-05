@@ -364,6 +364,11 @@ h2 {
     margin-left: 0;
     width: calc(var(--sectionWidth)/2 - var(--mMargin));
 }
+
+.contact-submit-button:is(:hover, :focus, :active) {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
 /*#endregion*/
 
 /* Responsive Design*/
