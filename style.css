@@ -67,7 +67,7 @@ h2 {
     --xlMargin: 3.75rem;
     --xxlMargin: 6.25rem;
 
-    --sectionWidth: min(80vw, 1000px);
+    --sectionWidth: min(80vw, 1200px);
 }
 /*#endregion*/
 
@@ -75,7 +75,7 @@ h2 {
 /*#region*/
 .mainCard {
     max-width: calc(var(--sectionWidth) + 10vw);
-    width: min(100%, 1100px);
+    width: min(100%, 1200px);
     margin: 10vh auto;
     border-radius: var(--border-radius);
     position: relative;
@@ -375,7 +375,7 @@ h2 {
 /*#region*/
 
 /* 768px */
-@media only screen {
+@media only screen and (max-width: 768px) {
     .contact-form-details {
         flex-direction: column;
     }
